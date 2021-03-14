@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPizzaSlice } from 'react-icons/fa';
+import Logo from '../../assets/logo.png';
 
 function Header() {
     return (
@@ -7,15 +8,20 @@ function Header() {
             <nav>
                 <div className="logo">
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Todoist_logo.png"
+                        src={Logo}
                         alt="Todolist"
                     />
                 </div>
 
                 <div className="settings">
                     <ul>
-                        <li>+</li>
-                        <li>
+                        <li 
+                            data-testid="quick-add-task-action"
+                            className="settings__add">+</li>
+                        <li
+                            data-testid="dark-mode-action"
+                            className="settings__darkmode"
+                        >
                             <FaPizzaSlice/>
                         </li>
                     </ul>
